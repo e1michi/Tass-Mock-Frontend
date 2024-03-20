@@ -1,0 +1,55 @@
+@startuml ビジネスマッチング
+[*] --> 依頼一覧: 依頼一覧メニュー
+
+依頼一覧 --> 依頼表示: 依頼リスト
+依頼表示 --> 依頼一覧: 削除／戻るボタン
+
+依頼一覧 --> 依頼作成: 新規作成ボタン
+依頼作成 --> 依頼一覧: 作成／戻るボタン
+
+依頼表示 --> 依頼編集: 編集ボタン
+依頼編集 --> 依頼表示: 変更／戻るボタン
+
+依頼表示 --> 応募: 応募ボタン
+応募 --> 依頼表示: 応募／戻るボタン
+
+依頼一覧 --> 依頼一覧: F/R/S/P
+
+依頼一覧: bizmatch_requests
+依頼表示: bizmatch_requests/show
+依頼作成: bizmatch_requests/new
+依頼編集: bizmatch_requests/edit
+応募: bizmatch_requests/entry
+
+[*] --> 応募一覧: 応募一覧メニュー
+
+応募一覧 --> 応募表示: 応募リスト
+応募表示 --> 応募一覧: 削除／戻るボタン
+
+応募表示 --> 応募編集: 編集ボタン
+応募編集 --> 応募表示: 変更／戻るボタン
+
+応募表示 --> 発注: 発注ボタン
+発注 --> 応募表示: 発注／戻るボタン
+
+応募一覧 --> 応募一覧: F/R/S/P
+
+応募一覧: bizmatch_applications
+応募表示: bizmatch_applications/show
+応募編集: bizmatch_applications/edit
+発注: bizmatch_applications/order
+
+[*] --> 取引一覧: 取引一覧メニュー
+
+取引一覧 --> 取引表示: 取引リスト
+取引表示 --> 取引一覧: 拒否／戻るボタン
+
+取引表示 --> 受注: 受注ボタン
+受注 --> 取引表示: 受注／戻るボタン
+
+取引一覧 --> 取引一覧: F/R/S/P
+
+取引一覧: bizmatch_deals
+取引表示: bizmatch_deals/show
+受注: bizmatch_deals/confirm
+@enduml
